@@ -18,7 +18,7 @@ export class UsersController {
   constructor(private userService: UsersService) {}
 
   @Post()
-  createUser(@Body() newUser: CreateUserDTO): Promise<User> {
+  createUser(@Body() newUser: CreateUserDTO) {
     return this.userService.createUser(newUser);
   }
 
@@ -28,8 +28,7 @@ export class UsersController {
   }
 
   @Get(':id')
-  getUser(@Param('id', ParseIntPipe) id: number): Promise<User> {
-    console.log(id);
+  getUser(@Param('id', ParseIntPipe) id: number) {
     return this.userService.getUser(id);
   }
 
