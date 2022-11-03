@@ -5,7 +5,8 @@ export class User {
   id: number;
   
   @Column({ unique: true })
-  username: string;
+  username: string;y
+  
 
   @Column()
   password: string;
